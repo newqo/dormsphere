@@ -5,7 +5,7 @@ services:
     restart: always
     environment:
       - MARIADB_ROOT_PASSWORD=rootdev
-      - MARIADB_DATABASE=mydb
+      - MARIADB_DATABASE=dormsphere_db
     ports: 
       - 3306:3306
     volumes:
