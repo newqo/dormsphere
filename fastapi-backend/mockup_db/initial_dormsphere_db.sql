@@ -14,6 +14,7 @@ create table `Users` (
     birthDate date not null,
     password varchar(255) not null,
     id_role tinyint not null,
+    isEmailVerified boolean DEFAULT 0 not null,
 
     primary key (email),
     foreign key (id_role) references Roles(id_role)
@@ -66,7 +67,7 @@ create table `RoomStatus` (
 
 drop table if exists `Rooms`;
 create table `Rooms` (
-    id_room smallint auto_increment not null,
+    id_room smallint not null,
     id_room_types tinyint not null,
     id_room_status tinyint not null,
 
