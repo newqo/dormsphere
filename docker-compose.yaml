@@ -9,7 +9,7 @@ services:
     ports: 
       - 3306:3306
     volumes:
-      - db_nextjs_with_fastapi_volume:/var/lib/mysql
+      - db_dormsphere_volume:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin:5.2
@@ -49,5 +49,5 @@ services:
       - backend-app
   
 volumes:
-  db_nextjs_with_fastapi_volume:
+  db_dormsphere_volume:
     driver: local
