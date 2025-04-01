@@ -7,7 +7,7 @@ class UnitBase(SQLModel):
 
 class Unit(UnitBase, table=True):
     id_unit : int = Field(primary_key=True)
-    bill : list[Bill] = Relationship(back_populates=Bill.unit)
+    bill : list["Bill"] = Relationship(back_populates="unit")
 
 class UnitPublic(UnitBase):
     id_unit : int
