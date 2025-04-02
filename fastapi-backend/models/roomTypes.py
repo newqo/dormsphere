@@ -9,8 +9,9 @@ class RoomTypesBase(SQLModel):
     room_price: float = Field(default=None, index=True)
 
 class RoomTypes(RoomTypesBase, table=True):
+    __tablename__ = 'room_types'
     id_room_types: int = Field(primary_key=True)
-    room_features: list["RoomFeatures"] = Relationship(back_populates="room_amenities",link_model=RoomFeatures)
+    room_features_link: list["RoomFeatures"] = Relationship(back_populates="room_amenities_link",link_model=RoomFeatures)
     rooms : list["Rooms"] = Relationship(back_populates="room_types")
 
 class RoomTypesPublic(RoomTypesBase):

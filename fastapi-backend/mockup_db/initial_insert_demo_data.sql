@@ -1,15 +1,15 @@
-insert into Roles(role_description) values
+insert into roles(role_description) values
 ("Customer"),
 ("Admin");
 
-insert into AmenitiesCategory(amenities_category_description) values
+insert into amenities_category(amenities_category_description) values
 ("Room Amenities"),
 ("Convenience & Services"),
 ("Dining & Kitchen Facilities"),
 ("Health & Wellness"),
 ("Social & Community Spaces");
 
-insert into Amenities(amenities_description,id_amenities_category) values
+insert into amenities(amenities_description,id_amenities_category) values
 ("Fully furnished rooms (bed, desk, chair, wardrobe)",1),
 ("Air conditioning & heating",1),
 ("High-speed Wi-Fi",1),
@@ -35,12 +35,12 @@ insert into Amenities(amenities_description,id_amenities_category) values
 ("Rooftop terrace & garden space",5),
 ("Community events & workshops",5);
 
-insert into RoomTypes(room_types_description,room_price) values
+insert into room_types(room_types_description,room_price) values
 ("Normal",5500),
 ("Premium",7500),
 ("Deluxe",10000);
 
-insert into RoomFeatures(id_room_types,id_amenities) values
+insert into room_features(id_room_types,id_amenities) values
 -- Normal Room Features
 (1,1), (1,2), (1,3), (1,4), (1,5), (1,6), -- Room Amenities
 (1,7), (1,8), (1,9), -- Convenience & Services
@@ -58,12 +58,12 @@ insert into RoomFeatures(id_room_types,id_amenities) values
 (3,13), (3,14), (3,15), (3,16), (3,17),
 (3,18), (3,19); -- Social & Community Spaces
 
-insert into RoomStatus(room_status_description) values
+insert into room_status(room_status_description) values
 ("Available"),
 ("Occupied"),
 ("Under Maintenance");
 
-insert into Rooms (id_room, id_room_types, id_room_status) values
+insert into rooms (id_room, id_room_types, id_room_status) values
 -- Floor 1
 -- Normal
 (101, 1, 1), (102, 1, 1), (103, 1, 1), (104, 1, 1), (105, 1, 1), 
@@ -114,17 +114,17 @@ insert into Rooms (id_room, id_room_types, id_room_status) values
 -- Deluxe
 (518, 3, 1), (519, 3, 1), (520, 3, 1);
 
-insert into ContactsDuration(contacts_duration_description) values
+insert into contacts_duration(contacts_duration_description) values
 ("1 Year");
 
-insert into ContactsStatus(contacts_status_description) values
+insert into contacts_status(contacts_status_description) values
 ("Waiting"),
 ("Accept"),
 ("Expired");
 
-insert into BillStatus(bill_status_description) values
+insert into bill_status(bill_status_description) values
 ("Pending"),
 ("Paid");
 
-insert into Unit(water,electricity) values
+insert into unit(water,electricity) values
 (20,8)
